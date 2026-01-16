@@ -1,0 +1,93 @@
+```{r}
+here::i_am("quarto/temp.qmd")
+dge_quant <- readRDS(here::here("output/dge/dge_quant.rds"))
+lapply(
+  c(
+    "tidyverse",
+    "limma",
+    "Glimma",
+    "colorspace"
+  ),
+  library,
+  character.only = TRUE
+)
+gsva_fit_contrasts <- readRDS(here::here("output/gsva/gsva_fit_contrasts.rds"))
+gsva_quant <- readRDS(here::here("output/gsva/gsva_quant.rds"))
+```
+
+## Coef 5
+```{r}
+glimmaVolcano(
+  gsva_fit_contrasts$mh,
+  coef = 5,
+  counts = exprs(gsva_quant$mh),
+  groups = gsva_quant$mh$treatment_day,
+  transform.counts = "none"
+)
+```
+
+## Coef 6
+```{r}
+glimmaVolcano(
+  gsva_fit_contrasts$mh,
+  coef = 6,
+  counts = exprs(gsva_quant$mh),
+  groups = gsva_quant$mh$treatment_day,
+  transform.counts = "none"
+)
+```
+
+## Coef 8
+```{r}
+glimmaVolcano(
+  gsva_fit_contrasts$mh,
+  coef = 8,
+  counts = exprs(gsva_quant$mh),
+  groups = gsva_quant$mh$treatment_day,
+  transform.counts = "none"
+)
+```
+
+## Coef 1
+```{r}
+glimmaVolcano(
+  gsva_fit_contrasts$mh,
+  coef = 1,
+  counts = exprs(gsva_quant$mh),
+  groups = gsva_quant$mh$treatment_day,
+  transform.counts = "none"
+)
+```
+
+## Coef 2
+```{r}
+glimmaVolcano(
+  gsva_fit_contrasts$mh,
+  coef = 2,
+  counts = exprs(gsva_quant$mh),
+  groups = gsva_quant$mh$treatment_day,
+  transform.counts = "none"
+)
+```
+
+## Coef 3
+```{r}
+glimmaVolcano(
+  gsva_fit_contrasts$mh,
+  coef = 3,
+  counts = exprs(gsva_quant$mh),
+  groups = gsva_quant$mh$treatment_day,
+  transform.counts = "none"
+)
+```
+
+## Coef 4
+```{r}
+glimmaVolcano(
+  gsva_fit_contrasts$mh,
+  coef = 4,
+  counts = exprs(gsva_quant$mh),
+  groups = gsva_quant$mh$treatment_day,
+  transform.counts = "none"
+)
+```
