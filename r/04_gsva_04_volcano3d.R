@@ -1,4 +1,4 @@
-here::i_am("r/06_gsva_04_volcano3d.R")
+here::i_am("r/04_gsva_04_volcano3d.R")
 
 # Attach package
 library("GSVA")
@@ -9,13 +9,7 @@ library("volcano3D")
 
 # Define labels
 volcano3d_labels <- list(
-  mh = c(
-    "HALLMARK_INFLAMMATORY_RESPONSE",
-    "HALLMARK_KRAS_SIGNALING_UP",
-    "HALLMARK_COMPLEMENT",
-    "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
-    "HALLMARK_INTERFERON_ALPHA_RESPONSE"
-  ),
+  mh = c(),
   m2_cgp = NULL,
   m2_cp = NULL,
   m5_go = NULL
@@ -193,11 +187,12 @@ volcano3d_allplots <- map2(
         polar,
         type = 1,
         label_rows = labels,
-        label_size = 24,
-        grid_width = 2.5,
-        axis_width = 2.5,
-        z_axis_title_size = 20,
-        radial_axis_title_size = 20,
+        label_size = 16,
+        grid_width = 1.5,
+        axis_width = 1.5,
+        marker_size = 4,
+        z_axis_title_size = 12,
+        radial_axis_title_size = 12,
         r_axis_ticks = breaks
       )
 
@@ -209,6 +204,7 @@ volcano3d_allplots <- map2(
         label_size = 12,
         grid_width = 2,
         axis_width = 2,
+        marker_size = 4,
         z_axis_title_size = 20,
         radial_axis_title_size = 20,
         r_axis_ticks = breaks
