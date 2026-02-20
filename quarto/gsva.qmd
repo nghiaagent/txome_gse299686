@@ -1,0 +1,53 @@
+# GSVA figures
+```{r}
+#| message: FALSE
+#| warning: FALSE
+here::i_am("quarto/gsva.qmd")
+
+# Attach package
+library("GSVA")
+library("limma")
+library("magrittr")
+library("tidyverse")
+library("volcano3D")
+
+# Load data
+volcano3d_polar <- readRDS(
+  file = here::here(
+    "output/gsva/volcano3d_polar.RDS"
+  )
+)
+
+volcano3d_allplots <- readRDS(
+  file = here::here(
+    "output/gsva/volcano3d_allplots_passages.RDS"
+  )
+)
+
+```
+
+## Plots - Hallmark - Non-responders - 4vs9vs17
+
+### 3D volcano
+```{r}
+#| column: page
+#| message: FALSE
+#| warning: FALSE
+volcano3d_allplots$mh$d4_v_d9_v_d17_non_responders$volcano3d
+```
+
+### Radial view - plotly
+```{r}
+#| column: page
+#| message: FALSE
+#| warning: FALSE
+volcano3d_allplots$mh$d4_v_d9_v_d17_non_responders$radial_plotly
+```
+
+### Radial view - ggplot
+```{r}
+#| column: page
+#| message: FALSE
+#| warning: FALSE
+volcano3d_allplots$mh$d4_v_d9_v_d17_non_responders$radial_ggplot
+```
