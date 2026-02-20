@@ -74,15 +74,16 @@ dge_results_lrt$padj <- dge_results_lrt$pvalue %>%
   p.adjust(method = "BH")
 
 # Save data
-## rlog expression
-
 ## Results
 ### LFC
-saveRDS(dge_results, file = here::here("output/dge/dge_results.rds"))
+saveRDS(
+  dge_results,
+  file = here::here("output/dge/dge_results.rds")
+)
 
 ### Shrunken LFC
 saveRDS(
-  dge_results,
+  dge_results_lfcshrink,
   file = here::here("output/dge/dge_results_lfcshrink.rds")
 )
 
