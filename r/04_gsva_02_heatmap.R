@@ -1,4 +1,4 @@
-here::i_am("r/06_gsva_02_heatmap.R")
+here::i_am("r/04_gsva_02_heatmap.R")
 
 # Attach packages
 library("Biobase")
@@ -7,6 +7,7 @@ library("ComplexHeatmap")
 library("GSVA")
 library("limma")
 library("magrittr")
+library("nghiaagentrutils")
 library("tidyverse")
 library("viridis")
 
@@ -122,8 +123,7 @@ heatmap_anno_object <- HeatmapAnnotation(
 
 # Format names of Hallmark gene sets
 rownames(gsva_exprs_heatmap[[1]]) <- rownames(gsva_exprs_heatmap[[1]]) %>%
-  str_remove("HALLMARK_") %>%
-  str_replace_all("_", " ")
+  recode_msigdbh()
 
 # Create a heatmap to extract column orders from
 heatmap_column_order <- Heatmap(
