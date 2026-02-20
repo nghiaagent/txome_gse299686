@@ -1,0 +1,15 @@
+project:
+  type: book
+
+book:
+  title: "GSE299686 Figure Dump"
+  author: "Mitchell Nguyen"
+  date: "02/05/2026"
+  chapters:
+    - index.qmd
+    - gsva.qmd
+
+format:
+  html:
+    theme: pulse
+    code-fold: true
