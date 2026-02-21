@@ -1,34 +1,36 @@
-# GSE299686 Reanalysis
+---
+title: "GSE299686 Reanalysis"
+format: gfm
+---
 
+```{r}
+#| include: False
+here::i_am("README.qmd")
+```
 
 # Introduction
-
-This repository contains the source code for my reanalysis of the
-GSE299686 dataset, involving response of mice cancer models to anti-PD-1
-treatment.
+This repository contains the source code for my reanalysis of the GSE299686 dataset, involving response of mice cancer models to anti-PD-1 treatment. 
 
 # Prerequisites
-
-Make sure the following are installed on your system:
+Make sure the following are installed on your system:  
 
 - Quarto
 - R 4.5.1
 
 # Reproduciblity
-
-To reproduce the analysis:
+To reproduce the analysis:  
 
 - Install all prerequisites software.
 - Clone the repository; Positron is recommended for this purpose.
 - Run the following in an R terminal to download all packages:
-
-``` r
+```{r}
+#| eval: False
 renv::restore()
 ```
 
 - Source each code file to perform all analyses:
-
-``` r
+```{r}
+#| eval: False
 source(here::here("r/01_load_expression.R"))
 source(here::here("r/02.R"))
 source(here::here("r/03_convert_dds_to_eset.R"))
@@ -42,7 +44,6 @@ source(here::here("r/05_postgsva_volcano.R"))
 ```
 
 - Render the figures in a shell terminal:
-
-<!-- -->
-
-    quarto render quarto
+```
+quarto render quarto
+```
