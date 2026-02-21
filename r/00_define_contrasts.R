@@ -1,5 +1,9 @@
 here::i_am("r/00_define_contrasts.R")
 
+######################
+# Define contrasts for DGE analysis
+######################
+
 # Define contrasts
 dge_deseq2_contrasts <- list(
   ## Compare between days of treatment

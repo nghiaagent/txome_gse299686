@@ -1,5 +1,9 @@
 here::i_am("r/05_postgsva_volcano.R")
 
+######################
+# Build volcano plots of GSVA results for selected gene sets
+######################
+
 # Attach packages
 library("Biobase")
 library("DESeq2")

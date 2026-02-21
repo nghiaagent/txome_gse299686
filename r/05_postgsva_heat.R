@@ -1,5 +1,9 @@
 here::i_am("r/05_postgsva_heat.R")
 
+######################
+# Build heatmap of GSVA results for selected gene sets
+######################
+
 # Attach packages
 library("Biobase")
 library("circlize")

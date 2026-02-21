@@ -1,6 +1,10 @@
 here::i_am("r/03_convert_dds_to_eset.R")
 
-# Attach packages
+######################
+# Convert DESeqDataSet to ExpressionSet for GSVA
+######################
+
+# Attach necessary packages
 library("Biobase")
 library("DESeq2")
 

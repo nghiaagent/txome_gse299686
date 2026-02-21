@@ -1,5 +1,9 @@
 here::i_am("r/04_gsva_03_heatmapfig2.R")
 
+######################
+# Build GSVA heatmap only for desired comparison
+######################
+
 # Attach packages
 library("Biobase")
 library("circlize")
@@ -26,12 +30,10 @@ gsva_quant <- readRDS(
 ## Subset GSVA objects to only MSigDB Hallmark gene sets
 ## Only non-responders between D4, 9, 17
 gsva_quant_subset <- gsva_quant$mh
-gsva_quant_subset <- gsva_quant_subset[
-  ,
+gsva_quant_subset <- gsva_quant_subset[,
   gsva_quant_subset$treatment_response == "NonResponder"
 ]
-gsva_quant_subset <- gsva_quant_subset[
-  ,
+gsva_quant_subset <- gsva_quant_subset[,
   gsva_quant_subset$day %in% c("D4", "D9", "D17")
 ]
 

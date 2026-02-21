@@ -1,5 +1,9 @@
 here::i_am("r/00_load_genesets.R")
 
+######################
+# Load gene sets for GSVA via GMT files
+######################
+
 # Attach necessary packages
 library("GSEABase")
 library("purrr")
