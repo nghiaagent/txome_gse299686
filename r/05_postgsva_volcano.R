@@ -22,17 +22,16 @@ dge_results_lfcshrink <- readRDS(
 )
 
 # Load list of genes for the gene sets of interest
-## Hallmark MYC targets V2
-## Hallmark interferon alpha
-
-### Define gene sets
+# Hallmark MYC targets V2
+# Hallmark interferon alpha
+## Define gene sets
 hallmark_sel <- c(
   "HALLMARK_MYC_TARGETS_V1",
   "HALLMARK_MYC_TARGETS_V2",
   "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION"
 )
 
-### Get list of ENSEMBL IDs within gene set
+## Get list of ENSEMBL IDs within gene set
 genes_sel <- hallmark_sel %>%
   set_names(., .) %>%
   map(\(hallmark) {
@@ -51,7 +50,6 @@ genes_sel <- hallmark_sel %>%
 # Build volcano plots
 ## Highlight genes in the selected hallmark gene sets
 ## Compare between days in non-responders
-
 plots_volcano_postgsva <- map(dge_results_lfcshrink, \(results) {
   map(genes_sel, \(genes_sel) {
     ## Split into 2 groups: Not highlighted and highlighted

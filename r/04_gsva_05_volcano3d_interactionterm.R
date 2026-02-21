@@ -50,8 +50,7 @@ breaks <- seq(
 
 # Create matrix with appropriate samples
 ## Analyse on mh only (for now)
-
-## Create GSVA quant object with appropriate samples
+### Create GSVA quant object with appropriate samples
 volcano3d_gsva_quant <- gsva_quant$mh
 
 ### Extract D4, D9, D17 samples

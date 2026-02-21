@@ -41,17 +41,16 @@ dge_vst <- dge_eset_subset %>%
   vst()
 
 # Load lists of genes for the gene sets of interest
-## Hallmark MYC targets V2
-## Hallmark interferon alpha
-
-### Define gene sets
+# Hallmark MYC targets V2
+# Hallmark interferon alpha
+## Define gene sets
 hallmark_sel <- c(
   "HALLMARK_MYC_TARGETS_V1",
   "HALLMARK_MYC_TARGETS_V2",
   "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION"
 )
 
-### Get list of ENTREZ IDs within gene set
+## Get list of ENTREZ IDs within gene set
 genes_sel <- hallmark_sel %>%
   set_names(., .) %>%
   map(\(hallmark) {
