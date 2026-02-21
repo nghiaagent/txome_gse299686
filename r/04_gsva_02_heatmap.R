@@ -2,6 +2,7 @@ here::i_am("r/04_gsva_02_heatmap.R")
 
 ######################
 # Build GSVA heatmap of significant gene sets
+# Across all tested collections
 ######################
 
 # Attach necessary packages
