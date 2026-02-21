@@ -6,7 +6,8 @@ here::i_am("r/00_load_genesets.R")
 
 # Attach necessary packages
 library("GSEABase")
-library("purrr")
+library("magrittr")
+library("tidyverse")
 
 # Load GMT files
 ## Populate list of files
