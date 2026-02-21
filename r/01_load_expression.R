@@ -1,6 +1,13 @@
 # Declare location
 here::i_am("r/01_load_expression.R")
 
+######################
+# Load GSE299686 expression data,
+# Transform to DESeqDataset object,
+# Run sva to calculate surrogate variables
+# Run DESeq2
+######################
+
 # Attach packages
 library("DESeq2")
 library("edgeR")

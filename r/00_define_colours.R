@@ -1,5 +1,9 @@
 here::i_am("r/00_define_colours.R")
 
+######################
+# Define colours for visualisation
+######################
+
 # Attach necessary packages
 library("colorspace")
 library("grDevices")

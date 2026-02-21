@@ -1,5 +1,9 @@
 here::i_am("r/04_gsva_03_heatmapfig2.R")
 
+######################
+# Build GSVA heatmap only for desired comparison
+######################
+
 # Attach packages
 library("Biobase")
 library("circlize")

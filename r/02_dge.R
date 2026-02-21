@@ -1,5 +1,11 @@
 here::i_am("r/02_dge.R")
 
+######################
+# Get DGE results from DESeq2,
+# with and without LFC shrinking,
+# and from the LR test
+######################
+
 # Attach necessary packages
 library("ashr")
 library("DESeq2")

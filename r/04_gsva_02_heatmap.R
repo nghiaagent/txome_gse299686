@@ -1,6 +1,10 @@
 here::i_am("r/04_gsva_02_heatmap.R")
 
-# Attach packages
+######################
+# Build GSVA heatmap of significant gene sets
+######################
+
+# Attach necessary packages
 library("Biobase")
 library("circlize")
 library("ComplexHeatmap")

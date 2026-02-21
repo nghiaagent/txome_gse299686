@@ -1,6 +1,10 @@
 here::i_am("r/04_gsva_01_run.R")
 
-# Attach package
+######################
+# Define colours for visualisation
+######################
+
+# Attach necessary packages
 library("Biobase")
 library("GSVA")
 library("limma")
